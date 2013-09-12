@@ -18,8 +18,8 @@ def main():
         for entry in file_gpa.readlines():
             entry = entry.split()
             # print repr(entry)
-            grade = int(entry[0]) # 成绩
-            credit = int(entry[1]) # 学分
+            grade = float(entry[0]) # 成绩
+            credit = float(entry[1]) # 学分
             gpa = 4 - ( 3.0 * ( 100.0 - grade ) * ( 100.0 - grade ) / 1600.0 )
             if gpa < 1:
                 gpa = 0
